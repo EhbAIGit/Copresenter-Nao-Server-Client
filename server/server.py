@@ -56,6 +56,11 @@ def add_to_conversation_log(user_input, machine_response, parsed_response, file_
 
 # Function to handle pointer events
 def pointer_listener(device):
+    global reset_conversation
+    reset_conversation = False
+    black_screen_pressed_time = 0
+    pressed = False
+
     while True:
         data = device.read(endpoint.bEndpointAddress, endpoint.wMaxPacketSize, timeout=50000000)
         if data:
@@ -67,6 +72,14 @@ def pointer_listener(device):
                 start_speaking_event.set()
             elif data[3] == 55:  # Black screen button
                 send_response(conn, "Internal Mandate: Sit")
+                black_screen_pressed_time = time.time()
+                pressed = True
+            elif data[3] == 0 and pressed:
+                press_duration = time.time() - black_screen_pressed_time             
+                if press_duration >= 2:
+                    print("Black Screen button released after 2 seconds: Context reset")
+                    reset_conversation = True
+                    pressed = False
             elif data[3] in (41, 62):  # Silent or other command
                 send_response(conn, "Internal Mandate: Silent")
 
@@ -207,6 +220,12 @@ conn, address = accept_connection(server_socket)
 print(f"Client connected from: {address}")
 
 while True:
+    if reset_conversation:
+        messages = []
+        messages = initial_messages.copy()
+        print ("Conversation is reset")
+        reset_conversation = False
+    
     if start_listening_event.is_set() and not stop_listening_event.is_set():
         audio_file_path = record_audio()
         if audio_file_path:
