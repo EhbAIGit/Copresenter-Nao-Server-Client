@@ -11,8 +11,8 @@ import os
 
 
 # Nao robot connection details
-# NAO_IP = "10.2.172.130"
-NAO_IP = "10.4.44.131"
+NAO_IP = "10.2.172.130"
+#NAO_IP = "10.4.44.131"
 NAO_PORT = 9559
 
 # class FallDetectionModule(object):

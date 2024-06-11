@@ -18,6 +18,7 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 import usb.core
 import usb.util
+import re
 
 from openai import OpenAI
 
@@ -30,13 +31,16 @@ HOST = socket.gethostname()
 PORT = 5000
 OPENAI_KEY = open("openaikey.txt", 'r').read()
 
+speech_controls = True
+default_contextual = True
+
 # Events for threading
 start_listening_event = threading.Event()
 stop_listening_event = threading.Event()
 start_speaking_event = threading.Event()
 
 # Load gestures from CSV
-def load_gestures(file_path='./nao/gestures_dataset/gestures.csv'):
+def load_gestures(file_path='./server/gestures_dataset/gestures.csv'):
     df = pd.read_csv(file_path, usecols=['Category', 'Gesture', 'Weight'])
     mappings = {}
 
@@ -205,7 +209,7 @@ assert endpoint is not None
 client = OpenAI(api_key=OPENAI_KEY)
 
 # Load initial context from file
-with open('nao/context.txt', 'r', encoding='utf-8') as file:
+with open('server/context.txt', 'r', encoding='utf-8') as file:
     inhoud = file.read()
 
 initial_messages = [{"role": "system", "content": inhoud}]
