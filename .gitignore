@@ -1,0 +1,4 @@
+server/openaikey.txt
+server/logs/conversation*
+server/logs/image*
+client/pythonsdk/pynaoqi-python2.7-2.8.6.23-win64-vs2015-20191127_152649.ziplogs/

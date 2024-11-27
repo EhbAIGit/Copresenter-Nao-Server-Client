@@ -1,0 +1,657 @@
+sample1: Hello, I am a happy robot! The speech synthesis is working fine.
+sample0: ^start(animations/Stand/Gestures/Hey_1) One.  ^wait(animations/Stand/Gestures/Hey_1) Two.
+sample2: Hello! ^start(animations/Stand/Gestures/Hey_1) Nice to meet you ^wait(animations/Stand/Gestures/Hey_1) ^start(animations/Stand/Gestures/YouKnowWhat_1) Today, I want to explain a few things about myself
+sample3: Hello. Look I can stop moving ^mode(disabled) and after I can resume moving ^mode(contextual), you see ?
+sample4: > 
+    \rspd=80\ \vol=100\ ^start(animations/Stand/Gestures/Hey_1) \pau=1000\  \mrk=2\ Hello!
+    Today I am here to help Maarten Dequanter with a presentation.
+sample_wake: ^pCall(ALMotion.wakeUp()) Ok, I wake up. 
+
+sample_builtin: >
+    Hello everyone, thanks for joining us today!
+    We are here to explore some amazing advancements in technology.
+    First, let's discuss the latest trends in artificial intelligence.
+    What implications do these developments have for our future?
+    It's crucial to understand the ethics involved.
+    We can choose to use AI for good or for less noble causes.
+
+sample_bow: >
+    \rspd=80\ \\vol=10\\ ^start(animations/Stand/Gestures/BowShort_1) Hello, you okay? Yes. 
+
+sample_falling: >
+    \rspd=80\ \vol=10\ ^start(animations/Stand/Gestures/Me_2) \pau=1000\   \mrk=4004\ Ik ben Nao, een humanoid robot ontworpen om met mensen te communiceren en hen te helpen waar ik kan.
+    \rspd=80\ \vol=10\ ^start(animations/Stand/Gestures/YouKnowWhat_6) \pau=1000\   \mrk=4004\ Ik heb 23 ingebouwde gebaren en mijn ogen kunnen 7 verschillende emoties weergeven voor verschillende gevoelens.
+    \rspd=80\ \vol=10\ ^start(animations/Stand/Gestures/Enthusiastic_1) \pau=1000\   \mrk=4001\ Ik ben hier vandaag om het LNO2-congres te co-presenteren en informatie te delen over AI in het hoger onderwijs!
+
+gestures_timing: >
+    \\rspd=80\\ ^mode(disabled) 
+    \\pau=500\\ Hello, YouKnowWhat_1, it is! \mrk=1\ ^start(animations/Stand/Gestures/YouKnowWhat_1)  ^wait(animations/Stand/Gestures/YouKnowWhat_1) One, \mrk=2\ Ok ^pCall(ALRobotPosture.goToPosture("Stand",1)) ^mode(disabled) Next 
+    \\pau=500\\ Hello, YouKnowWhat_2, it is! \mrk=1\ ^start(animations/Stand/Gestures/YouKnowWhat_2)  ^wait(animations/Stand/Gestures/YouKnowWhat_2) One, \mrk=2\ Ok ^pCall(ALRobotPosture.goToPosture("Stand",1)) ^mode(disabled) Next
+    \\pau=500\\ Hello, YouKnowWhat_3, it is! \mrk=1\ ^start(animations/Stand/Gestures/YouKnowWhat_3)  ^wait(animations/Stand/Gestures/YouKnowWhat_3) One, \mrk=2\ Ok ^pCall(ALRobotPosture.goToPosture("Stand",1)) ^mode(disabled) Next
+    \\pau=500\\ Hello, YouKnowWhat_5, it is! \mrk=1\ ^start(animations/Stand/Gestures/YouKnowWhat_5)  ^wait(animations/Stand/Gestures/YouKnowWhat_5) One, \mrk=2\ Ok ^pCall(ALRobotPosture.goToPosture("Stand",1)) ^mode(disabled) Next
+    \\pau=500\\ Hello, YouKnowWhat_6, it is! \mrk=1\ ^start(animations/Stand/Gestures/YouKnowWhat_6)  ^wait(animations/Stand/Gestures/YouKnowWhat_6) One, \mrk=2\ Ok ^pCall(ALRobotPosture.goToPosture("Stand",1)) ^mode(disabled) Next
+hey: >
+    ^mode(disabled) 
+    Hello, Hey 1, it is! ^start(animations/Stand/Gestures/Hey_1) ^mode(disabled) ^wait(animations/Stand/Gestures/Hey_1)  One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten."
+    Hello, Hey 2, it is! ^start(animations/Stand/Gestures/Hey_2) ^mode(disabled) ^wait(animations/Stand/Gestures/Hey_2) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Hey 3, it is! ^start(animations/Stand/Gestures/Hey_3) ^mode(disabled) ^wait(animations/Stand/Gestures/Hey_3) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Hey 4, it is! ^start(animations/Stand/Gestures/Hey_4) ^mode(disabled)  One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Hey 5, it is! ^start(animations/Stand/Gestures/Hey_5) ^mode(disabled)  One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Hey 6, it is! ^start(animations/Stand/Gestures/Hey_6) ^mode(disabled)  One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+you: >
+    ^mode(disabled) Hello, You 1 ^start(animations/Stand/Gestures/You_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    Hello, You 2  ^start(animations/Stand/Gestures/You_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    Hello, You 3 ^start(animations/Stand/Gestures/You_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    Hello, You 4 ^start(animations/Stand/Gestures/You_4) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    Hello, You 5 ^start(animations/Stand/Gestures/You_5) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    Hello, You 6 ^start(animations/Stand/Gestures/You_6) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+
+enthusiastic: >
+    ^mode(disabled) Hello, Enthusiastic 1 ^start(animations/Stand/Gestures/Enthusiastic_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Enthusiastic 2, it is!  ^start(animations/Stand/Gestures/Enthusiastic_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Enthusiastic 3, it is! ^start(animations/Stand/Gestures/Enthusiastic_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Enthusiastic 4, it is! ^start(animations/Stand/Gestures/Enthusiastic_4) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Enthusiastic 5, it is! ^start(animations/Stand/Gestures/Enthusiastic_5) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Enthusiastic 6, it is! ^start(animations/Stand/Gestures/Enthusiastic_6) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Enthusiastic 7, it is! ^start(animations/Stand/Gestures/Enthusiastic_7) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+bowshort: >
+    ^mode(disabled) 
+    Hello, BowShort 1, it is!  ^start(animations/Stand/Gestures/BowShort_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+idontknow: >
+    ^mode(disabled) 
+    Hello, I Don't Know 1, it is! ^start(animations/Stand/Gestures/IDontKnow_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, I Don't Know 2, it is!  ^start(animations/Stand/Gestures/IDontKnow_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, I Don't Know 3, it is! ^start(animations/Stand/Gestures/IDontKnow_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, I Don't Know 4, it is! ^start(animations/Stand/Gestures/IDontKnow_4) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+me: >
+    ^mode(disabled) 
+    Hello, Me 1, it is! ^start(animations/Stand/Gestures/Me_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Me 2, it is!  ^start(animations/Stand/Gestures/Me_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Me 3, it is! ^start(animations/Stand/Gestures/Me_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Me 4, it is! ^start(animations/Stand/Gestures/Me_4) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Me 5, it is! ^start(animations/Stand/Gestures/Me_5) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Me 6, it is! ^start(animations/Stand/Gestures/Me_6) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+"no": >
+    ^mode(disabled) 
+    Hello, No 1, it is! ^start(animations/Stand/Gestures/No_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, No 2, it is!  ^start(animations/Stand/Gestures/No_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, No 3, it is! ^start(animations/Stand/Gestures/No_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, No 4, it is! ^start(animations/Stand/Gestures/No_4) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, No 5, it is! ^start(animations/Stand/Gestures/No_5) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, No 6, it is! ^start(animations/Stand/Gestures/No_6) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, No 7, it is! ^start(animations/Stand/Gestures/No_7) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, No 8, it is! ^start(animations/Stand/Gestures/No_8) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, No 9, it is! ^start(animations/Stand/Gestures/No_9) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+please: >
+    ^mode(disabled) 
+    \\pau=500\\ Hello, Please 1, it is! ^start(animations/Stand/Gestures/Please_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    \\pau=500\\ Hello, Please 2, it is!  ^start(animations/Stand/Gestures/Please_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    \\pau=500\\ Hello, Please 3, it is! ^start(animations/Stand/Gestures/Please_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+"yes": >
+    ^mode(disabled) 
+    Hello, Yes 1, it is! ^start(animations/Stand/Gestures/Yes_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Yes 2, it is!  ^start(animations/Stand/Gestures/Yes_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Yes 3, it is! ^start(animations/Stand/Gestures/Yes_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+youknowwhat: >
+    ^mode(disabled) 
+    Hello, YouKnowWhat 1, it is! ^start(animations/Stand/Gestures/YouKnowWhat_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, YouKnowWhat 2, it is!  ^start(animations/Stand/Gestures/YouKnowWhat_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, YouKnowWhat 3, it is! ^start(animations/Stand/Gestures/YouKnowWhat_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, YouKnowWhat 4, it is! ^start(animations/Stand/Gestures/YouKnowWhat_4) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, YouKnowWhat 5, it is! ^start(animations/Stand/Gestures/YouKnowWhat_5) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, YouKnowWhat 6, it is! ^start(animations/Stand/Gestures/YouKnowWhat_6) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+you: >
+    ^mode(disabled) 
+    Hello, You 1, it is! ^start(animations/Stand/Gestures/You_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, You 2, it is!  ^start(animations/Stand/Gestures/You_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, You 3, it is! ^start(animations/Stand/Gestures/You_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, You 4, it is! ^start(animations/Stand/Gestures/You_4) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, You 5, it is! ^start(animations/Stand/Gestures/You_5) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+explain: >
+    ^mode(disabled) 
+    Hello, Explain 1, it is! ^start(animations/Stand/Gestures/Explain_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 2, it is!  ^start(animations/Stand/Gestures/Explain_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 3, it is! ^start(animations/Stand/Gestures/Explain_3) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 4, it is! ^start(animations/Stand/Gestures/Explain_4) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 5, it is! ^start(animations/Stand/Gestures/Explain_5) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 6, it is! ^start(animations/Stand/Gestures/Explain_6) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 7, it is! ^start(animations/Stand/Gestures/Explain_7) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 8, it is! ^start(animations/Stand/Gestures/Explain_8) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 9, it is! ^start(animations/Stand/Gestures/Explain_9) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 10, it is! ^start(animations/Stand/Gestures/Explain_10) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 11, it is! ^start(animations/Stand/Gestures/Explain_11) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 12, it is! ^start(animations/Stand/Gestures/Explain_12) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Explain 13, it is! ^start(animations/Stand/Gestures/Explain_13) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+trailer_short: >
+    \\rspd=80\\ 
+    ^mode(disabled) ^start(animations/Stand/Gestures/Hey_2) 
+    Hello there! It's wonderful to see you. I hope you're having a great day!^wait(animations/Stand/Gestures/Hey_1)^mode(disabled)
+    \\pau=1000\\
+    \\mrk=0\\ ^start(animations/Stand/Gestures/You_5) ^mode(disabled)
+    Today, I want to share some ^wait(animations/Stand/Gestures/You_5)^mode(disabled) 
+    ^start(animations/Stand/Waiting/Think_1)^mode(disabled) 
+    exciting things about our interactions and how robots like me can learn to communicate with humans
+    ^wait(animations/Stand/Waiting/Think_1)^mode(disabled).
+
+trailer_short_dutch: >
+    \\rspd=80\\ 
+    ^mode(disabled) ^start(animations/Stand/Gestures/Hey_2) ^mode(disabled)
+    Hallo daar! Het is geweldig om je te zien. Ik hoop dat je een leuke dag hebt!^wait(animations/Stand/Gestures/Hey_1)^mode(disabled)
+    \\pau=500\\
+    ^start(animations/Stand/Gestures/You_5) ^mode(disabled)
+    Vandaag wil ik wat spannende  dingen delen over onze interacties.
+    \\pau=700\\
+    ^start(animations/Stand/Gestures/Please_1)^mode(disabled)
+    Vertrouw me alsjeblieft als een eekhoorn met een verborgen voorraad ^stop(animations/Stand/Gestures/Please_1)^mode(disabled)." - ik weet iets wat jij niet weet!
+    ^start(animations/Stand/Gestures/BowShort_1) ^mode(disabled)
+    Bedankt dat je vandaag tijd voor me hebt vrijgemaakt. Ik kijk uit naar ons volgende gesprek!
+    ^start(animations/Stand/Gestures/CalmDown_1) ^mode(disabled) Rustig maar! Ik ben maar een primitieve robot, maar ik kan verbeterd worden.
+
+trailer: >
+    \\rspd=70\\
+    ^mode(disabled) ^start(animations/Stand/Gestures/Hey_2) ^mode(disabled) 
+    Hello there! It's wonderful to see you. I hope you're having a great day!
+
+    ^start(animations/Stand/Gestures/You_5) ^mode(disabled)
+    Today, I want to share some exciting things about our interactions and how robots like me can learn to communicate with humans.
+
+    ^start(animations/Stand/Gestures/Explain_4) ^mode(disabled)
+    Let's start by understanding the basic gestures that I use to express myself. These gestures help me to be more like a human in the way I speak and act.
+
+    ^start(animations/Stand/Gestures/Enthusiastic_5) ^mode(disabled)
+    For example, when I am really happy or excited about something, I show my enthusiasm like this!
+
+    ^start(animations/Stand/Gestures/Explain_6) ^mode(disabled)
+    Isn't that interesting? I can also show confusion or uncertainty. It's important for me to express that I don't know something, just like you might.
+
+    ^start(animations/Stand/Gestures/IDontKnow_1) ^mode(disabled)
+    Like this, when I'm unsure about an answer to a question, I can let you know by saying, I'm not sure about that.
+
+    ^start(animations/Stand/Gestures/Me_6) ^mode(disabled)
+    It's also essential that I can refer to myself when we're talking. This helps in making our conversation more clear and personal.
+
+    ^start(animations/Stand/Gestures/No_3) ^mode(disabled)
+    And just like you, I can say no when something is not possible or I disagree with it.
+
+    ^start(animations/Stand/Gestures/Yes_3) ^mode(disabled)
+    Or say yes when I agree with you or confirm something that is correct.
+
+    ^start(animations/Stand/Gestures/Please_1) ^mode(disabled)
+    I can also be polite, using words like please when asking for something or making a request.
+
+    ^start(animations/Stand/Gestures/YouKnowWhat_3) ^mode(disabled)
+    You know what? There's still so much we can learn from each other as we continue to interact.
+
+    ^start(animations/Stand/Gestures/BowShort_1) ^mode(disabled)
+    Thank you for spending time with me today. I look forward to our next conversation!
+
+spell: \\tn=spell\\hello
+startup_dutch: Ik ben opgestart.
+startup_dutch_0: \\bound=W\\ Ik ben opgestart.
+startup_dutch_1: \\bound=S\\ Ik ben opgestart.
+startup_dutch_2: \\rspd=80\\  Ik ben opgestart.
+emphasis_0: \\rspd=80\\ \\vct=85\ \\bound=W\\ Dit is \\emph=0\\ slechts een voorbeeld om over na te denken.
+emphasis_1: \\bound=S\\ Dit is \\emph=2\\ slechts een voorbeeld om over na te denken.
+emphasis_2: Dit is \\mrk=1\\ slechts een voorbeeld om \\mrk=2\\ over na te denken.
+
+
+showsky: 
+    ^mode(disabled) 
+    Hello, Show Sky 1, it is! ^start(animations/Stand/Gestures/ShowSky_1) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Show Sky 2, it is! ^start(animations/Stand/Gestures/ShowSky_2) ^mode(disabled) One, Two, Three, Four, Five, Six,^pCall(ALRobotPosture.goToPosture("Stand",1))   Seven, Eight, Nine, Ten.
+    Hello, Show Sky 3, it is! ^start(animations/Stand/Gestures/ShowSky_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+    Hello, Show Sky 4, it is! ^start(animations/Stand/Gestures/ShowSky_2) ^mode(disabled) One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten.
+
+trailer_short_dutch_with_bookmarks: >
+    \\rspd=80\\ 
+    \\mrk=1\\ ^mode(disabled) ^start(animations/Stand/Gestures/Hey_2) ^mode(disabled)\\mrk=2\\
+    \\mrk=1\\ Hallo daar!  Het is geweldig om je te zien. Ik hoop dat je een leuke dag hebt!^wait(animations/Stand/Gestures/Hey_1)
+    ^mode(disabled) \\mrk=2\\
+    \\pau=500\\
+    \\mrk=1\\ ^start(animations/Stand/Gestures/You_5) ^mode(disabled) \\mrk=2\\
+    Vandaag  wil ik wat spannende  dingen delen over onze interacties.
+    \\pau=700\\
+    ^start(animations/Stand/Gestures/Please_1)^mode(disabled)
+    Vertrouw \\mrk=2\\ me alsjeblieft als een eekhoorn met een verborgen voorraad ^stop(animations/Stand/Gestures/Please_1)^mode(disabled)." - ik weet iets wat jij niet weet!
+    ^start(animations/Stand/Gestures/BowShort_1) ^mode(disabled)
+    Bedankt dat je vandaag tijd voor me hebt vrijgemaakt. Ik kijk uit naar ons volgende gesprek!
+    ^start(animations/Stand/Gestures/CalmDown_1) ^mode(disabled) Rustig maar! Ik ben maar een primitieve robot, maar ik kan verbeterd worden.
+
+
+all_bodytalk: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, BodyTalk_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_1) ^wait(animations/Stand/Gestures/BodyTalk_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_2) ^wait(animations/Stand/Gestures/BodyTalk_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_3) ^wait(animations/Stand/Gestures/BodyTalk_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_4) ^wait(animations/Stand/Gestures/BodyTalk_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_5) ^wait(animations/Stand/Gestures/BodyTalk_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_6) ^wait(animations/Stand/Gestures/BodyTalk_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_7, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_7) ^wait(animations/Stand/Gestures/BodyTalk_7) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_8, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_8) ^wait(animations/Stand/Gestures/BodyTalk_8) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_9, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_9) ^wait(animations/Stand/Gestures/BodyTalk_9) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_10, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_10) ^wait(animations/Stand/Gestures/BodyTalk_10) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_11, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_11) ^wait(animations/Stand/Gestures/BodyTalk_11) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_12, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_12) ^wait(animations/Stand/Gestures/BodyTalk_12) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_13, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_13) ^wait(animations/Stand/Gestures/BodyTalk_13) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_14, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_14) ^wait(animations/Stand/Gestures/BodyTalk_14) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_15, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_15) ^wait(animations/Stand/Gestures/BodyTalk_15) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, BodyTalk_16, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BodyTalk_16) ^wait(animations/Stand/Gestures/BodyTalk_16) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_youknowhwat: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, YouKnowWhat_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/YouKnowWhat_1) ^wait(animations/Stand/Gestures/YouKnowWhat_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, YouKnowWhat_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/YouKnowWhat_2) ^wait(animations/Stand/Gestures/YouKnowWhat_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, YouKnowWhat_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/YouKnowWhat_3) ^wait(animations/Stand/Gestures/YouKnowWhat_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, YouKnowWhat_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/YouKnowWhat_5) ^wait(animations/Stand/Gestures/YouKnowWhat_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, YouKnowWhat_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/YouKnowWhat_6) ^wait(animations/Stand/Gestures/YouKnowWhat_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    
+all_b: >    
+    \\rspd=80\\     
+    \\pau=2000\\  Hello, Bored_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Bored_1) ^wait(animations/Stand/Gestures/Bored_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    
+all_bow: >    
+    ^mode(disabled) 
+    \\rspd=80\\         
+    \\pau=2000\\  Hello, BowShort_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/BowShort_1) ^wait(animations/Stand/Gestures/BowShort_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, But_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/But_1) ^wait(animations/Stand/Gestures/But_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_c: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, CalmDown_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/CalmDown_1) ^wait(animations/Stand/Gestures/CalmDown_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, CalmDown_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/CalmDown_2) ^wait(animations/Stand/Gestures/CalmDown_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, CalmDown_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/CalmDown_3) ^wait(animations/Stand/Gestures/CalmDown_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, CalmDown_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/CalmDown_4) ^wait(animations/Stand/Gestures/CalmDown_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, CalmDown_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/CalmDown_5) ^wait(animations/Stand/Gestures/CalmDown_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, CalmDown_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/CalmDown_6) ^wait(animations/Stand/Gestures/CalmDown_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Choice_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Choice_1) ^wait(animations/Stand/Gestures/Choice_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_d: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Desperate_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Desperate_1) ^wait(animations/Stand/Gestures/Desperate_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Desperate_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Desperate_2) ^wait(animations/Stand/Gestures/Desperate_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Desperate_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Desperate_3) ^wait(animations/Stand/Gestures/Desperate_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Desperate_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Desperate_4) ^wait(animations/Stand/Gestures/Desperate_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Desperate_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Desperate_5) ^wait(animations/Stand/Gestures/Desperate_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_e: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Embarrassed_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Embarrassed_1) ^wait(animations/Stand/Gestures/Embarrassed_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Enthusiastic_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Enthusiastic_1) ^wait(animations/Stand/Gestures/Enthusiastic_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Enthusiastic_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Enthusiastic_2) ^wait(animations/Stand/Gestures/Enthusiastic_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Enthusiastic_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Enthusiastic_3) ^wait(animations/Stand/Gestures/Enthusiastic_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Enthusiastic_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Enthusiastic_4) ^wait(animations/Stand/Gestures/Enthusiastic_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Enthusiastic_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Enthusiastic_5) ^wait(animations/Stand/Gestures/Enthusiastic_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Everything_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Everything_1) ^wait(animations/Stand/Gestures/Everything_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Everything_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Everything_2) ^wait(animations/Stand/Gestures/Everything_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Everything_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Everything_3) ^wait(animations/Stand/Gestures/Everything_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Everything_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Everything_4) ^wait(animations/Stand/Gestures/Everything_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Excited_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Excited_1) ^wait(animations/Stand/Gestures/Excited_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_explain: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Explain_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_1) ^wait(animations/Stand/Gestures/Explain_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_2) ^wait(animations/Stand/Gestures/Explain_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_3) ^wait(animations/Stand/Gestures/Explain_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_4) ^wait(animations/Stand/Gestures/Explain_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_5) ^wait(animations/Stand/Gestures/Explain_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_6) ^wait(animations/Stand/Gestures/Explain_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_7, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_7) ^wait(animations/Stand/Gestures/Explain_7) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_8, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_8) ^wait(animations/Stand/Gestures/Explain_8) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_9, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_9) ^wait(animations/Stand/Gestures/Explain_9) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_10, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_10) ^wait(animations/Stand/Gestures/Explain_10) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Explain_11, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Explain_11) ^wait(animations/Stand/Gestures/Explain_11) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_f: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Far_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Far_1) ^wait(animations/Stand/Gestures/Far_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Far_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Far_2) ^wait(animations/Stand/Gestures/Far_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Far_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Far_3) ^wait(animations/Stand/Gestures/Far_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_g: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Give_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Give_1) ^wait(animations/Stand/Gestures/Give_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Give_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Give_2) ^wait(animations/Stand/Gestures/Give_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Give_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Give_3) ^wait(animations/Stand/Gestures/Give_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Give_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Give_4) ^wait(animations/Stand/Gestures/Give_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Give_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Give_5) ^wait(animations/Stand/Gestures/Give_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Give_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Give_6) ^wait(animations/Stand/Gestures/Give_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+ 
+all_h: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Happy_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Happy_1) ^wait(animations/Stand/Gestures/Happy_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Happy_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Happy_2) ^wait(animations/Stand/Gestures/Happy_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Happy_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Happy_3) ^wait(animations/Stand/Gestures/Happy_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Happy_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Happy_4) ^wait(animations/Stand/Gestures/Happy_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_hey: >
+    ^mode(disabled) 
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Hey_1, it is! ^start(animations/Stand/Gestures/Hey_1) ^wait(animations/Stand/Gestures/Hey_1) Ok  Ok now check if there is a latch. ^mode(disabled) Next
+    \\pau=2000\\  Hello, Hey_2, it is! ^start(animations/Stand/Gestures/Hey_2) ^wait(animations/Stand/Gestures/Hey_2) Ok Ok now check if there is a latch. ^mode(disabled) Next
+    \\pau=2000\\  Hello, Hey_3, it is!  ^start(animations/Stand/Gestures/Hey_3) ^wait(animations/Stand/Gestures/Hey_3) Ok Ok now check if there is a latch. ^mode(disabled) Next
+    \\pau=2000\\  Hello, Hey_4, it is!  ^start(animations/Stand/Gestures/Hey_4) ^wait(animations/Stand/Gestures/Hey_4) Ok Ok now check if there is a latch. ^mode(disabled) Next
+    \\pau=2000\\  Hello, Hey_5, it is! ^start(animations/Stand/Gestures/Hey_5) ^wait(animations/Stand/Gestures/Hey_5) Ok  Ok now check if there is a latch. ^mode(disabled) Next
+    \\pau=2000\\  Hello, Hey_6, it is!  ^start(animations/Stand/Gestures/Hey_6) ^wait(animations/Stand/Gestures/Hey_6) Ok Ok now check if there is a latch. ^mode(disabled) Next
+    \\pau=2000\\  Hello, Hysterical_1, it is!  ^start(animations/Stand/Gestures/Hysterical_1) ^wait(animations/Stand/Gestures/Hysterical_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_i: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, IDontKnow_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/IDontKnow_1) ^wait(animations/Stand/Gestures/IDontKnow_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, IDontKnow_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/IDontKnow_2) ^wait(animations/Stand/Gestures/IDontKnow_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, IDontKnow_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/IDontKnow_3) ^wait(animations/Stand/Gestures/IDontKnow_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, IDontKnow_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/IDontKnow_4) ^wait(animations/Stand/Gestures/IDontKnow_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_m: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Me_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Me_1) ^wait(animations/Stand/Gestures/Me_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Me_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Me_2) ^wait(animations/Stand/Gestures/Me_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Me_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Me_3) ^wait(animations/Stand/Gestures/Me_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Me_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Me_4) ^wait(animations/Stand/Gestures/Me_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Me_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Me_5) ^wait(animations/Stand/Gestures/Me_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Me_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Me_6) ^wait(animations/Stand/Gestures/Me_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Me_7, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Me_7) ^wait(animations/Stand/Gestures/Me_7) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_1) ^wait(animations/Stand/Gestures/No_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_2) ^wait(animations/Stand/Gestures/No_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_3) ^wait(animations/Stand/Gestures/No_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_4) ^wait(animations/Stand/Gestures/No_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_5) ^wait(animations/Stand/Gestures/No_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_6) ^wait(animations/Stand/Gestures/No_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_7, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_7) ^wait(animations/Stand/Gestures/No_7) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_8, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_8) ^wait(animations/Stand/Gestures/No_8) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, No_9, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/No_9) ^wait(animations/Stand/Gestures/No_9) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Nothing_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Nothing_1) ^wait(animations/Stand/Gestures/Nothing_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Nothing_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Nothing_2) ^wait(animations/Stand/Gestures/Nothing_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Peaceful_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Peaceful_1) ^wait(animations/Stand/Gestures/Peaceful_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Please_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Please_1) ^wait(animations/Stand/Gestures/Please_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Please_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Please_2) ^wait(animations/Stand/Gestures/Please_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Please_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Please_3) ^wait(animations/Stand/Gestures/Please_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_s: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, ShowFloor_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowFloor_1) ^wait(animations/Stand/Gestures/ShowFloor_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowFloor_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowFloor_2) ^wait(animations/Stand/Gestures/ShowFloor_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowFloor_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowFloor_3) ^wait(animations/Stand/Gestures/ShowFloor_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowFloor_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowFloor_4) ^wait(animations/Stand/Gestures/ShowFloor_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_1) ^wait(animations/Stand/Gestures/ShowSky_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_2) ^wait(animations/Stand/Gestures/ShowSky_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_4) ^wait(animations/Stand/Gestures/ShowSky_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_5) ^wait(animations/Stand/Gestures/ShowSky_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_6) ^wait(animations/Stand/Gestures/ShowSky_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_7, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_7) ^wait(animations/Stand/Gestures/ShowSky_7) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_8, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_8) ^wait(animations/Stand/Gestures/ShowSky_8) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_9, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_9) ^wait(animations/Stand/Gestures/ShowSky_9) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_10, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_10) ^wait(animations/Stand/Gestures/ShowSky_10) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowSky_11, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowSky_11) ^wait(animations/Stand/Gestures/ShowSky_11) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowTablet_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowTablet_2) ^wait(animations/Stand/Gestures/ShowTablet_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, ShowTablet_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/ShowTablet_3) ^wait(animations/Stand/Gestures/ShowTablet_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_t: >
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Think_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Think_1) ^wait(animations/Stand/Gestures/Think_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Think_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Think_2) ^wait(animations/Stand/Gestures/Think_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Think_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Think_3) ^wait(animations/Stand/Gestures/Think_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Thinking_1, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Thinking_1) ^wait(animations/Stand/Gestures/Thinking_1) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Thinking_2, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Thinking_2) ^wait(animations/Stand/Gestures/Thinking_2) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Thinking_3, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Thinking_3) ^wait(animations/Stand/Gestures/Thinking_3) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Thinking_4, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Thinking_4) ^wait(animations/Stand/Gestures/Thinking_4) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Thinking_5, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Thinking_5) ^wait(animations/Stand/Gestures/Thinking_5) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Thinking_6, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Thinking_6) ^wait(animations/Stand/Gestures/Thinking_6) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Thinking_7, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Thinking_7) ^wait(animations/Stand/Gestures/Thinking_7) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Thinking_8, it is! \\mrk=1\\ ^start(animations/Stand/Gestures/Thinking_8) ^wait(animations/Stand/Gestures/Thinking_8) Ok \\mrk=2\\ Ok now check if there is a latch ^mode(disabled) Next
+
+all_y: >
+    ^mode(disabled)
+    \\rspd=80\\ 
+    \\pau=2000\\  Hello, Yes_1, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/Yes_1) ^wait(animations/Stand/Gestures/Yes_1) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Yes_2, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/Yes_2) ^wait(animations/Stand/Gestures/Yes_2) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, Yes_3, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/Yes_3) ^wait(animations/Stand/Gestures/Yes_3) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, You_1, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/You_1) ^wait(animations/Stand/Gestures/You_1) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, You_2, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/You_2) ^wait(animations/Stand/Gestures/You_2) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, You_3, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/You_3) ^wait(animations/Stand/Gestures/You_3) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, You_4, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/You_4) ^wait(animations/Stand/Gestures/You_4) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, You_5, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/You_5) ^wait(animations/Stand/Gestures/You_5) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+    \\pau=2000\\  Hello, You_6, it is! \\mrk=1001\\ ^start(animations/Stand/Gestures/You_6) ^wait(animations/Stand/Gestures/You_6) Ok \\mrk=1002\\ Ok now check if there is a latch ^mode(disabled) Next
+
+
+
+
+
+new_bowshort: >
+    \pau=2000\ 
+    ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BowShort_1) One, Two.  ^wait(animations/Stand/Gestures/BowShort_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_bored: >
+    \\rspd=80\\    
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Bored_1) One, Two.  ^wait(animations/Stand/Gestures/Bored_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_calmdown: >
+    \\rspd=80\\
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/CalmDown_1) One, Two.  ^wait(animations/Stand/Gestures/CalmDown_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/CalmDown_2) One, Two.  ^wait(animations/Stand/Gestures/CalmDown_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/CalmDown_3) One, Two.  ^wait(animations/Stand/Gestures/CalmDown_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/CalmDown_4) One, Two.  ^wait(animations/Stand/Gestures/CalmDown_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/CalmDown_5) One, Two.  ^wait(animations/Stand/Gestures/CalmDown_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/CalmDown_6) One, Two.  ^wait(animations/Stand/Gestures/CalmDown_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_choice_but: >
+    \\rspd=80\\
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Choice_1) One, Two.  ^wait(animations/Stand/Gestures/Choice_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/But_1) One, Two.  ^wait(animations/Stand/Gestures/But_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_desparate: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Desperate_1) One, Two.  ^wait(animations/Stand/Gestures/Desperate_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Desperate_2) One, Two.  ^wait(animations/Stand/Gestures/Desperate_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Desperate_3) One, Two.  ^wait(animations/Stand/Gestures/Desperate_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Desperate_4) One, Two.  ^wait(animations/Stand/Gestures/Desperate_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Desperate_5) One, Two.  ^wait(animations/Stand/Gestures/Desperate_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_embarrased: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Embarrassed_1) One, Two.  ^wait(animations/Stand/Gestures/Embarrassed_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_enthusiastic: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Enthusiastic_1) One, Two.  ^wait(animations/Stand/Gestures/Enthusiastic_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Enthusiastic_2) One, Two.  ^wait(animations/Stand/Gestures/Enthusiastic_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Enthusiastic_3) One, Two.  ^wait(animations/Stand/Gestures/Enthusiastic_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Enthusiastic_4) One, Two.  ^wait(animations/Stand/Gestures/Enthusiastic_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Enthusiastic_5) One, Two.  ^wait(animations/Stand/Gestures/Enthusiastic_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_everything: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Everything_1) One, Two.  ^wait(animations/Stand/Gestures/Everything_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Everything_2) One, Two.  ^wait(animations/Stand/Gestures/Everything_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Everything_3) One, Two.  ^wait(animations/Stand/Gestures/Everything_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Everything_4) One, Two.  ^wait(animations/Stand/Gestures/Everything_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_excited: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Excited_1) One, Two.  ^wait(animations/Stand/Gestures/Excited_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_explain: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_1) One, Two.  ^wait(animations/Stand/Gestures/Explain_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_2) One, Two.  ^wait(animations/Stand/Gestures/Explain_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_3) One, Two.  ^wait(animations/Stand/Gestures/Explain_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_4) One, Two.  ^wait(animations/Stand/Gestures/Explain_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_5) One, Two.  ^wait(animations/Stand/Gestures/Explain_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_6) One, Two.  ^wait(animations/Stand/Gestures/Explain_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_7) One, Two.  ^wait(animations/Stand/Gestures/Explain_7) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_8) One, Two.  ^wait(animations/Stand/Gestures/Explain_8) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_9) One, Two.  ^wait(animations/Stand/Gestures/Explain_9) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_10) One, Two.  ^wait(animations/Stand/Gestures/Explain_10) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Explain_11) One, Two.  ^wait(animations/Stand/Gestures/Explain_11) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_far: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Far_1) One, Two.  ^wait(animations/Stand/Gestures/Far_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Far_2) One, Two.  ^wait(animations/Stand/Gestures/Far_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Far_3) One, Two.  ^wait(animations/Stand/Gestures/Far_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_give: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Give_1) One, Two.  ^wait(animations/Stand/Gestures/Give_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Give_2) One, Two.  ^wait(animations/Stand/Gestures/Give_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Give_3) One, Two.  ^wait(animations/Stand/Gestures/Give_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Give_4) One, Two.  ^wait(animations/Stand/Gestures/Give_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Give_5) One, Two.  ^wait(animations/Stand/Gestures/Give_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Give_6) One, Two.  ^wait(animations/Stand/Gestures/Give_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_happy: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Happy_1) One, Two.  ^wait(animations/Stand/Gestures/Happy_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_happy2: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Happy_2) One, Two.  ^wait(animations/Stand/Gestures/Happy_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_happy3: >    
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Happy_3) One, Two.  ^wait(animations/Stand/Gestures/Happy_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_happy4: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Happy_4) One, Two.  ^wait(animations/Stand/Gestures/Happy_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_hey: >
+    \\rspd=80\\
+    \\pau=2000\\ ^mode(disabled) \\mrk=1001\\ ^start(animations/Stand/Gestures/Hey_1) One, Two.  ^wait(animations/Stand/Gestures/Hey_1) Three. \\mrk=1002\\ ^mode(disabled) Three, Four. Now Check if I have a latch. 
+    \\pau=2000\\ ^mode(disabled) \\mrk=1001\\ ^start(animations/Stand/Gestures/Hey_2) One, Two.  ^wait(animations/Stand/Gestures/Hey_2) Three. \\mrk=1002\\ ^mode(disabled) Three, Four. Now Check if I have a latch. 
+    \\pau=2000\\ ^mode(disabled) \\mrk=1001\\ ^start(animations/Stand/Gestures/Hey_3) One, Two.  ^wait(animations/Stand/Gestures/Hey_3) Three. \\mrk=1002\\ ^mode(disabled) Three, Four. Now Check if I have a latch. 
+    \\pau=2000\\ ^mode(disabled) \\mrk=1001\\ ^start(animations/Stand/Gestures/Hey_4) One, Two.  ^wait(animations/Stand/Gestures/Hey_4) Three. \\mrk=1002\\ ^mode(disabled) Three, Four. Now Check if I have a latch. 
+    \\pau=2000\\ ^mode(disabled) \\mrk=1001\\ ^start(animations/Stand/Gestures/Hey_5) One, Two.  ^wait(animations/Stand/Gestures/Hey_5) Three. \\mrk=1002\\ ^mode(disabled) Three, Four. Now Check if I have a latch. 
+    \\pau=2000\\ ^mode(disabled) \\mrk=1001\\ ^start(animations/Stand/Gestures/Hey_6) One, Two.  ^wait(animations/Stand/Gestures/Hey_6) Three. \\mrk=1002\\ ^mode(disabled) Three, Four. Now Check if I have a latch. 
+
+new_hysterical: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Hysterical_1) One, Two.  ^wait(animations/Stand/Gestures/Hysterical_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_i: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/IDontKnow_1) One, Two.  ^wait(animations/Stand/Gestures/IDontKnow_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/IDontKnow_2) One, Two.  ^wait(animations/Stand/Gestures/IDontKnow_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/IDontKnow_3) One, Two.  ^wait(animations/Stand/Gestures/IDontKnow_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/IDontKnow_4) One, Two.  ^wait(animations/Stand/Gestures/IDontKnow_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Me_1) One, Two.  ^wait(animations/Stand/Gestures/Me_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Me_2) One, Two.  ^wait(animations/Stand/Gestures/Me_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Me_3) One, Two.  ^wait(animations/Stand/Gestures/Me_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Me_4) One, Two.  ^wait(animations/Stand/Gestures/Me_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Me_5) One, Two.  ^wait(animations/Stand/Gestures/Me_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Me_6) One, Two.  ^wait(animations/Stand/Gestures/Me_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Me_7) One, Two.  ^wait(animations/Stand/Gestures/Me_7) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_1) One, Two.  ^wait(animations/Stand/Gestures/No_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_2) One, Two.  ^wait(animations/Stand/Gestures/No_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_3) One, Two.  ^wait(animations/Stand/Gestures/No_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_4) One, Two.  ^wait(animations/Stand/Gestures/No_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_5) One, Two.  ^wait(animations/Stand/Gestures/No_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_6) One, Two.  ^wait(animations/Stand/Gestures/No_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_7) One, Two.  ^wait(animations/Stand/Gestures/No_7) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_8) One, Two.  ^wait(animations/Stand/Gestures/No_8) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/No_9) One, Two.  ^wait(animations/Stand/Gestures/No_9) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_n: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Nothing_1) One, Two.  ^wait(animations/Stand/Gestures/Nothing_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Nothing_2) One, Two.  ^wait(animations/Stand/Gestures/Nothing_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Peaceful_1) One, Two.  ^wait(animations/Stand/Gestures/Peaceful_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Please_1) One, Two.  ^wait(animations/Stand/Gestures/Please_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Please_2) One, Two.  ^wait(animations/Stand/Gestures/Please_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Please_3) One, Two.  ^wait(animations/Stand/Gestures/Please_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_peaceful: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Peaceful_1) One, Two.  ^wait(animations/Stand/Gestures/Peaceful_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_showfloor: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowFloor_1) One, Two.  ^wait(animations/Stand/Gestures/ShowFloor_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowFloor_2) One, Two.  ^wait(animations/Stand/Gestures/ShowFloor_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowFloor_3) One, Two.  ^wait(animations/Stand/Gestures/ShowFloor_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowFloor_4) One, Two.  ^wait(animations/Stand/Gestures/ShowFloor_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_showsky: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_1) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_2) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_4) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_5) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_6) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_7) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_7) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_8) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_8) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_9) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_9) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_10) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_10) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowSky_11) One, Two.  ^wait(animations/Stand/Gestures/ShowSky_11) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_showtablet: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowTablet_2) One, Two.  ^wait(animations/Stand/Gestures/ShowTablet_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/ShowTablet_3) One, Two.  ^wait(animations/Stand/Gestures/ShowTablet_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_think: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Think_1) One, Two.  ^wait(animations/Stand/Gestures/Think_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Think_2) One, Two.  ^wait(animations/Stand/Gestures/Think_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Think_3) One, Two.  ^wait(animations/Stand/Gestures/Think_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Thinking_1) One, Two.  ^wait(animations/Stand/Gestures/Thinking_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Thinking_2) One, Two.  ^wait(animations/Stand/Gestures/Thinking_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Thinking_3) One, Two.  ^wait(animations/Stand/Gestures/Thinking_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Thinking_4) One, Two.  ^wait(animations/Stand/Gestures/Thinking_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Thinking_5) One, Two.  ^wait(animations/Stand/Gestures/Thinking_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Thinking_6) One, Two.  ^wait(animations/Stand/Gestures/Thinking_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Thinking_7) One, Two.  ^wait(animations/Stand/Gestures/Thinking_7) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Thinking_8) One, Two.  ^wait(animations/Stand/Gestures/Thinking_8) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_y: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Yes_1) One, Two.  ^wait(animations/Stand/Gestures/Yes_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Yes_2) One, Two.  ^wait(animations/Stand/Gestures/Yes_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/Yes_3) One, Two.  ^wait(animations/Stand/Gestures/Yes_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/You_1) One, Two.  ^wait(animations/Stand/Gestures/You_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/You_2) One, Two.  ^wait(animations/Stand/Gestures/You_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/You_3) One, Two.  ^wait(animations/Stand/Gestures/You_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/You_4) One, Two.  ^wait(animations/Stand/Gestures/You_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/You_5) One, Two.  ^wait(animations/Stand/Gestures/You_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/You_6) One, Two.  ^wait(animations/Stand/Gestures/You_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_youknowwhat: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/YouKnowWhat_1) One, Two.  ^wait(animations/Stand/Gestures/YouKnowWhat_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/YouKnowWhat_2) One, Two.  ^wait(animations/Stand/Gestures/YouKnowWhat_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/YouKnowWhat_3) One, Two.  ^wait(animations/Stand/Gestures/YouKnowWhat_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/YouKnowWhat_5) One, Two.  ^wait(animations/Stand/Gestures/YouKnowWhat_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/YouKnowWhat_6) One, Two.  ^wait(animations/Stand/Gestures/YouKnowWhat_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_bodytalk: >
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_1) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_1) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_2) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_2) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_3) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_3) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_4) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_4) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_5) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_5) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_6) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_6) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_7) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_7) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_8) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_8) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_9) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_9) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_10) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_10) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_11) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_11) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_12) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_12) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_13) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_13) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_14) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_14) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_15) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_15) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+    \pau=2000\ ^mode(disabled) \mrk=1001\ ^start(animations/Stand/Gestures/BodyTalk_16) One, Two.  ^wait(animations/Stand/Gestures/BodyTalk_16) Three. \mrk=1002\ ^mode(disabled) Three, Four. Now Check if I have a latch.
+
+new_sample1: >
+    \rspd=80\ ^mode(disabled) ^start(animations/Stand/Gestures/Hey_2) Hello everyone!  ^wait(animations/Stand/Gestures/Hey_2)
+
+new_sample2: >
+    \\rspd=80\\ 
+    \pau=2000\  ^mode(disabled) Today, ^start(animations/Stand/Gestures/Enthusiastic_1)  I want to share something exciting with you!
+
+new_sample2.5: >
+    \pau=2000\ ^mode(disabled)  ^start(animations/Stand/Gestures/ShowSky_1) You know, sometimes we look up at the sky, and wonder about the stars. ^wait(animations/Stand/Gestures/ShowSky_1)
+
+new_sample3: >
+    \\rspd=80\\ 
+    \pau=1000\ ^mode(disabled) or we look down at the ground, ^start(animations/Stand/Gestures/ShowFloor_1) and think about the treasures hidden beneath us ^wait(animations/Stand/Gestures/ShowFloor_1).
+
+
+new_maarten: >
+    \\rspd=80\\
+    Now, I'm moving my head. \mrk=2002\  \mrk=2001\ \mrk=2003\ \mrk=60000\
+
+new_maarten2: >
+    \\rspd=80\\ \\vol=20\\
+    \pau=2000\  ^mode(disabled) Well, ^start(animations/Stand/Gestures/IDontKnow_4) I don't know. I'm not sure. ^mode(disabled) If this me is me.
+
+new_maarten3: >
+    \\rspd=80\\ \\vol=20\\
+    \pau=2000\  Well, ^start(animations/Stand/Gestures/IDontKnow_4) ^mode(disabled) I don't know. I'm not sure.  If this me is me.

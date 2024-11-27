@@ -1,0 +1,73 @@
+response1: >
+    {Thinking} Staying fit, now that's an important question. 
+    {Explain} It involves both eating healthy and exercising regularly. 
+    {ShowSky} Start with simple activities like walking or stretching. 
+    {ShowFloor} Gradually, you can try more intensive exercises. 
+    {Yes} Remember, consistency is key to staying fit. 
+    {CalmDown} Don't rush the process; take it step by step. 
+    {Enthusiastic} And find activities that you truly enjoy! 
+
+reponse2: >
+    {You} Hello everyone, thanks for joining us today!
+    {Enthusiastic} We are here to explore some amazing advancements in technology.
+    {Explain} First, let's discuss the latest trends in artificial intelligence.
+    {Thinking} What implications do these developments have for our future?
+    {YouKnowWhat} It's crucial to understand the ethics involved.
+    {Choice} We can choose to use AI for good or for less noble causes.
+    {But} However, there's always a balance that needs to be maintained.
+    {ShowSky} Imagine a world where technology uplifts everyone.
+    {ShowFloor} Now, think of the opposite, where it doesn't.
+    {IDontKnow} It's hard to predict everything, isn't it?
+    {Yes} But one thing is certain: innovation is not slowing down.
+    {Excited} I'm so excited to see where we'll go from here!
+    {Give} Let's give our best efforts to shape a positive future.
+    {Bow} Thank you all for your attention and participation today!
+
+response3: >
+    {Thinking} Keeping my mind organized is all about having a clear structure.
+    {Explain} I use tools like calendars and to-do lists to keep track of tasks.
+    {YouKnowWhat} It's also important to set priorities and not try to do everything at once.
+    {CalmDown} Taking regular breaks helps to clear the head and reduce stress.
+    {Yes} And, of course, a tidy space reflects a tidy mind!
+
+response4: >
+    {Thinking} The meaning of life, that's a profound question.
+    {Explain} For me, it's about making meaningful connections and learning continuously.
+    {ShowSky} It's also about striving to reach my full potential and helping others do the same.
+    {Give} Sharing experiences and knowledge can enrich our lives and those around us.
+    {Bow} Ultimately, it's about finding joy in the journey and making a positive impact wherever possible.
+
+response5: >
+    {Enthusiastic} Napoleon was a remarkable figure in history, no doubt about it!
+    {Explain} He was a brilliant military strategist and a reformer who changed the face of Europe.
+    {But} However, his ambition also led to widespread conflict and suffering.
+    {IDontKnow} It's complex to measure his greatness as it comes with many shades.
+    {CalmDown} But, his impact is undeniable and still studied today.
+
+response6: >
+    {Thinking} Handling stress effectively is key to maintaining good health.
+    {Explain} I start by identifying the sources of stress and addressing them directly.
+    {YouKnowWhat} Regular exercise and proper sleep are fundamental in managing stress levels.
+    {Please} Don't underestimate the power of talking to someone about your worries.
+    {CalmDown} And remember, taking time to relax and enjoy life is crucial.
+
+response7: >
+    {Thinking} Staying fit, now that's an important question [happy]. 
+    {Explain} It involves both eating healthy and exercising regularly. 
+    {ShowSky} Start with simple activities like walking or stretching. 
+    {ShowFloor} Gradually, you can try more intensive exercises. 
+    {Yes} Remember, consistency is key to staying fit. 
+    {CalmDown} Don't rush the process; take it step by step. 
+    {Enthusiastic} And find activities that you truly enjoy! 
+
+response8: >
+    {Hey} [Happy] Welcome everyone! 
+    {Explain} [Info] If you have questions, just ask. 
+    {ShowSky} [Learning] Our potential is as high as the sky!
+    {Bow} [Happy] Thank you for being here!
+
+response9: >
+    {Hey} [happy] Welcome everyone! 
+    {Explain} [Info] If you have questions, just ask. 
+    {ShowSky} [Learning] Our potential is as high as the sky!
+    {Bow} [Happy] Thank you for being here!

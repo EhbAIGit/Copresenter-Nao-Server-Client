@@ -1,0 +1,120 @@
+Category,Gesture,Duration,Latch,Glitch,Preference,Comment,Weight
+Bow,BowShort_1,5.26,n,,*****,Bowing to the audience,1
+But,But_1,3.29,y,n,,,1
+CalmDown,CalmDown_1,4.39,y,n,,,0.02
+CalmDown,CalmDown_2,3.45,y,n,,,0.03
+CalmDown,CalmDown_3,3.47,y,n,*****,Asking the audience to calm down,0.5
+CalmDown,CalmDown_4,4.16,y,n,*****,,0.2
+CalmDown,CalmDown_5,4.4,y,n,,,0.05
+CalmDown,CalmDown_6,3.79,y,n,*****,,0.2
+Choice,Choice_1,3.44,y,n,,Pretends to be choosing between two,1
+Desperate,Desperate_1,3.79,y,n,***,,0.6
+Desperate,Desperate_2,3.1,y,n,,,0.1
+Desperate,Desperate_3,3.89,y,n,,,0.1
+Desperate,Desperate_4,3.17,y,n,,,0.1
+Desperate,Desperate_5,4.3,y,n,*****,disappointed,0.1
+Embarrassed,Embarrassed_1,2.35,y,n,,{not signifying embarrassment},1
+Enthusiastic,Enthusiastic_1,3.31,y,n,,,0.1
+Enthusiastic,Enthusiastic_2,3.3,y,n,,,0.1
+Enthusiastic,Enthusiastic_3,3.88,y,n,,,0.1
+Enthusiastic,Enthusiastic_4,4.25,y,n,,,0.1
+Enthusiastic,Enthusiastic_5,4.18,y,n,*****,excited to explain something,0.5
+Everything,Everything_1,4.93,y,n,*****,,0.5
+Everything,Everything_2,3.71,y,n,,,0.1
+Everything,Everything_3,4.77,y,n,,,0.1
+Everything,Everything_4,3.31,y,n,*****,Shorter version of everything,0.3
+Excited,Excited_1,4.26,y,n,*****,excited!,1
+Explain,Explain_1,3.3,y,n,*****,,0.3
+Explain,Explain_2,3.7,y,n,,,0.05
+Explain,Explain_3,4.27,y,n,*****,,0.3
+Explain,Explain_4,4.22,y,n,,,0.05
+Explain,Explain_5,4.18,y,n,,,0.05
+Explain,Explain_6,2.29,y,n,,,0.05
+Explain,Explain_7,3.31,y,n,,,0.02
+Explain,Explain_8,3.82,y,n,,short explanation,0.02
+Explain,Explain_9,4.27,y,n,,short explanation,0.01
+Explain,Explain_10,3.23,y,n,,short explanation,0.05
+Explain,Explain_11,4.94,y,n,*****,opens up hands for a full explanation,0.1
+Far,Far_1,4.19,y,n,*****,opens up arms widely,0.4
+Far,Far_2,4.17,y,n,,,0.2
+Far,Far_3,5.24,y,n,*****,opens up one arm and points far away,0.4
+Give,Give_1,3.83,y,n,*****,give,0.5
+Give,Give_2,4.77,n,n,,,0.1
+Give,Give_3,3.32,y,n,,,0.1
+Give,Give_4,5.23,y,n,,,0.1
+Give,Give_5,4.27,y,n,,,0.1
+Give,Give_6,4.06,n,n,,,0.1
+Happy,Happy_1,2.32,y,y,,,0.25
+Happy,Happy_2,2.33,y,y,,,0.25
+Happy,Happy_3,2.33,y,y,,,0.25
+Happy,Happy_4,2.65,y,y,,,0.25
+Hey,Hey_1,5.92,n,n,,One arm,0.05
+Hey,Hey_2,6.8,n,n,*****,Both arms,0.8
+Hey,Hey_3,5.15,n,n,,One arm,0.05
+Hey,Hey_4,4.97,n,n,,One arm,0.05
+Hey,Hey_5,5.21,n,n,,One arm widely open,0.03
+Hey,Hey_6,4.4,n,n,,One arm slightly open,0.02
+Hysterical,Hysterical_1,2.36,y,?,,,1
+IDontKnow,IDontKnow_1,4.25,y,n,,,0.1
+IDontKnow,IDontKnow_2,4.16,y,n,,head also moves with arms,0.2
+IDontKnow,IDontKnow_3,3.14,y,n,,,0.1
+IDontKnow,IDontKnow_4,3.33,y,n,*****,head moves,0.6
+Me,Me_1,3.2,y,n,,,0.1
+Me,Me_2,3.21,y,n,*****,points toward itself,0.5
+Me,Me_3,3.11,y,n,,,0.1
+Me,Me_4,3.31,y,n,,,0.05
+Me,Me_5,5.03,y,n,,,0.05
+Me,Me_6,5.19,y,n,,,0.1
+Me,Me_7,3.98,y,n,,,0.1
+No,No_1,3.82,n,n,,,0.02
+No,No_2,4.29,y,n,,not at all; arm up,0.1
+No,No_3,3.33,y,n,,,0.02
+No,No_4,3.22,y,n,*****,not at all; both arms up,0.35
+No,No_5,4.18,y,n,,,0.02
+No,No_6,3.31,y,n,,decisive no,0.1
+No,No_7,3.29,y,n,,head moving,0.02
+No,No_8,3.14,y,n,,head moves,0.02
+No,No_9,4.16,y,n,*****,"head moves, one arm",0.35
+Nothing,Nothing_1,3.95,y,n,****,nothing,0.7
+Nothing,Nothing_2,3.98,y,n,,nothing � no ways,0.3
+Peaceful,Peaceful_1,2.34,y,y,,,1
+Please,Please_1,4.27,y,n,*****,implores,0.8
+Please,Please_2,4.23,y,n,,,0.1
+Please,Please_3,3.71,y,n,,,0.1
+ShowFloor,ShowFloor_1,4.78,y,n,*****,shows the floor with both hands; heads down,0.6
+ShowFloor,ShowFloor_2,4.17,y,n,,,0.1
+ShowFloor,ShowFloor_3,4.29,y,n,*****,shows the floor with both hands; heads down,0.2
+ShowFloor,ShowFloor_4,3.15,y,n,*****,heads more bent,0.2
+ShowSky,ShowSky_1,4.27,y,n,*****,like praying! Both arms,0.5
+ShowSky,ShowSky_2,4.72,y,n,,like praying!,0.05
+ShowSky,ShowSky_4,4.22,y,n,,both arms up,0.02
+ShowSky,ShowSky_5,4.26,y,n,,one arm up to the right; head bent right;,0.03
+ShowSky,ShowSky_6,3.24,y,n,,one arm up to the right; bent right;,0.02
+ShowSky,ShowSky_7,4.24,y,n,,,0.03
+ShowSky,ShowSky_8,4.02,y,n,*****,both arms up,0.1
+ShowSky,ShowSky_9,3.71,y,n,*****,,0.05
+ShowSky,ShowSky_10,4.26,y,n,*****,like praying with hands open straight,0.1
+ShowSky,ShowSky_11,4.12,y,n,*****,,0.1
+ShowTablet,ShowTablet_2,2.31,y,n,,{not signifying much},0.5
+ShowTablet,ShowTablet_3,2.24,y,y,,{not signifying much},0.5
+Thinking,Thinking_1,3.19,y,,,,0.1
+Thinking,Thinking_2,6.08,y,,*****,,0.35
+Thinking,Thinking_3,5.07,y,,*****,,0.35
+Thinking,Thinking_4,3.14,y,,,,0.05
+Thinking,Thinking_5,5.22,y,,,,0.05
+Thinking,Thinking_6,3.18,y,,,,0.03
+Thinking,Thinking_7,5.23,y,,,"specific gesture, with one arm on the chest, the other away",0.02
+Thinking,Thinking_8,4.23,y,,,"specific gesture, with one arm on the chest, the other away",0.05
+Yes,Yes_1,3.13,y,,*****,fast yes!,0.3
+Yes,Yes_2,2.35,y,,*****,just nods,0.3
+Yes,Yes_3,2.34,y,,*****,two nods,0.4
+You,You_1,3.27,y,,,,0.1
+You,You_2,3.82,y,,*****,emphasizes you,0.4
+You,You_3,4.01,n,,,,0.1
+You,You_4,4.29,n,,,,0.1
+You,You_5,4.19,n,,*****,you all,0.3
+YouKnowWhat,YouKnowWhat_1,3,y,n,*****,then hands on the waist,0.4
+YouKnowWhat,YouKnowWhat_2,4,y,n,,"a little bit odd, like guarding",0.1
+YouKnowWhat,YouKnowWhat_3,5,y,n,,like bowing,0.1
+YouKnowWhat,YouKnowWhat_5,4,y,n,,fair,0.1
+YouKnowWhat,YouKnowWhat_6,3,y,n,,short,0.1

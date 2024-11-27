@@ -1,0 +1,4 @@
+\rspd=80\ \vol=100\ ^start(animations/Stand/Gestures/Hey_4) \pau=1000\  [ters] Welcome everyone!
+\rspd=80\ \vol=100\ ^start(animations/Stand/Gestures/Explain_3) \pau=1000\  \mrk=4004\ If you have questions, just ask.
+\rspd=80\ \vol=100\ ^start(animations/Stand/Gestures/ShowSky_1) \pau=1000\  \mrk=4007\ Our potential is as high as the sky!
+\rspd=80\ \vol=100\ ^start(animations/Stand/Gestures/BowShort_1) \pau=1000\  \mrk=4001\ Thank you for being here!

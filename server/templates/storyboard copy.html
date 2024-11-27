@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Storyboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io@4.5.4/client-dist/socket.io.min.js"></script>
+    <style>
+        .story-segment {
+            margin-bottom: 20px;
+        }
+        .story-segment img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Storyboard</h1>
+    <div id="storyboard">
+        <!-- Images will be dynamically updated here -->
+    </div>
+
+    <script>
+        const socket = io(); // Connect to the server
+
+        // Function to render images dynamically
+        function renderImages(images) {
+            const storyboard = document.getElementById('storyboard');
+            storyboard.innerHTML = ''; // Clear the current content
+            images.forEach(image => {
+                const segment = document.createElement('div');
+                segment.className = 'story-segment';
+                segment.innerHTML = `
+                    <img src="${image.url}" alt="Image">
+                    <p>${image.caption}</p>
+                `;
+                storyboard.appendChild(segment);
+            });
+        }
+
+        // Request the initial images list from the server
+        socket.on('connect', () => {
+            console.log("Connected to the server, requesting images...");
+            socket.emit('request_images');
+        });
+
+        // Listen for 'update_images' event to update the storyboard
+        socket.on('update_images', (data) => {
+            console.log("Received update_images event:", data);
+            renderImages(data.images);
+        });
+    </script>
+</body>
+</html>
