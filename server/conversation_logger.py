@@ -4,19 +4,15 @@ from datetime import datetime
 class ConversationLogger:
     def __init__(self, context_filename):
         self.context_filename = context_filename
-        self.thread_count = 0
 
-    def set_thread_count(self, count):
-        self.thread_count = count
-
-    def add_to_conversation_log(self, user_input, machine_response, parsed_response):
+    def add_to_conversation_log(self, thread_count, user_input, machine_response, parsed_response):
         """
         Adds a conversation entry to the log file in a proper JSON array format.
         """
         # Create the log entry
         entry = {
             "timestamp": datetime.now().isoformat(),
-            "thread_count": self.thread_count,
+            "thread_count": thread_count,
             "user_input": user_input,
             "machine_response": machine_response,
             "parsed_response": parsed_response

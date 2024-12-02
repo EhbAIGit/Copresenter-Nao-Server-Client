@@ -293,7 +293,7 @@ def main_loop():
             send_response(conn, ascii_text)
             
             # Log the conversation
-            conversation_logger.add_to_conversation_log(user_input, assistant_response, ascii_text)
+            conversation_logger.add_to_conversation_log(thread_count, user_input, assistant_response, ascii_text)
 
             # Create a cleaned version of the assistant response for image generation
             cleaned_response = clean_text(assistant_response)
