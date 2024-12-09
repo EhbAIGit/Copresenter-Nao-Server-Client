@@ -7,12 +7,12 @@ import yaml
 import re
 
 # Modify PYTHONPATH to access Nao's Python SDK library
-sys.path.append('C:\\Data\\Desktop\\Repos\\EhB\\Nao_Copresenter\\client\\pythonsdk_old')
+sys.path.append('D:\\\Github\\Nao\\Copresenter-Nao-Server-Client\\client\\pythonsdk_old')
 
 from naoqi import ALProxy  # Use ALProxy for NAOqi 2.1.4 compatibility
 
 # Nao robot connection details
-NAO_IP =  "192.168.30.100" # "192.168.129.8" #"192.168.30.101" #
+NAO_IP =  "10.2.172.127" # "192.168.129.8" #"192.168.30.101" #
 NAO_PORT = 9559
 
 
